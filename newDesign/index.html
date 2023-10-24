@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/aa65ba333e.js" crossorigin="anonymous"></script>
+    <!-- slickのCSS -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.min.css" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="top-bar clearfix">
+        <h1
+          >高度なCAS冷凍技術を使用した魚介類
+          を中心にした本格的な食体験を提供する冷凍食品ショップ「まぐろ屋けんちゃん」</h1
+        >
+        <div class="header-inner-wrap">
+          <div class="header-inner header-logo">
+            <a href="/"
+              ><img
+                src="https://shop11-makeshop.akamaized.net/shopimages/maguroichiba/logo.png"
+                alt="まぐろ市場まぐろ屋けんちゃん"
+            /></a>
+          </div>
+          <div class="header-inner header-icon">
+            <ul class="second-nav">
+              <li class="search">
+                <div class="search-box">
+                  <a href="#makeshop-common-search-url" class="btn-go search-url">
+                    <div class="btn-go-wrap"
+                      ><img src="/view/images/template/11/svg-search.svg" /><span>検索</span></div
+                    >
+                  </a>
+                  <div class="close">×</div>
+                  <input
+                    data-id="makeshop-search-keyword"
+                    value=""
+                    id="search"
+                    name="search"
+                    type="text"
+                    placeholder="商品名・キーワードなど"
+                    class="search-keyword"
+                  />
+                </div>
+                <div class="search-icon"><img src="/view/images/template/11/svg-search.svg" /><span>検索</span></div>
+              </li>
+              <li class="login-link"
+                ><a href="/view/member/login" class="nav-login"
+                  ><img src="/view/images/template/11/svg-user.svg" /><span>ログイン</span></a
+                ></li
+              >
+              <li class="account-link"
+                ><a
+                  href="https://www.makeshop.jp/ssl/?ssltype=ssl_shop_member_entry&amp;k=bWFndXJvaWNoaWJh"
+                  class="nav-account"
+                  ><img src="/view/images/template/11/svg-member.svg" /><span>会員登録</span></a
+                ></li
+              >
+              <li class="cart-link"
+                ><a href="/view/cart" class="nav-cart">
+                  <img src="/view/images/template/11/svg-shopping-cart.svg" />
+                  <span class="cart-badge">7</span>
+                  <span>カート</span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <nav class="header-navigation">
+          <ul>
+            <li><a href="/view/category/all_items">商品一覧</a></li>
+            <li><a href="/view/guide">ガイド</a></li>
+            <li><a href="/view/page/about">まぐろ屋けんちゃんとは？</a></li>
+            <li><a href="#">店舗紹介</a></li>
+            <li><a href="#makeshop-common-contact-url">お問い合わせ</a></li>
+          </ul>
+        </nav>
+        <!--- スマホここから --->
+        <div class="sp-nav-logo">
+          <a href="/"
+            ><img
+              src="https://shop11-makeshop.akamaized.net/shopimages/maguroichiba/logo.png"
+              alt="まぐろ市場まぐろ屋けんちゃん"
+          /></a>
+        </div>
+        <div class="sp-nav-wrap">
+          <div class="menu-trigger"><span></span><span></span><span></span></div>
+          <nav>
+            <ul>
+              <li class="search-link-sp">
+                <dl class="search1">
+                  <dt>
+                    <input
+                      data-id="makeshop-search-keyword"
+                      value=""
+                      placeholder="商品名・キーワードなど"
+                      class="search-keyword"
+                    />
+                  </dt>
+                  <dd>
+                    <a href="#makeshop-common-search-url" class="search-url">
+                      <button
+                        ><span><img src="/view/images/template/11/svg-search.svg" /></span
+                      ></button>
+                    </a>
+                  </dd>
+                </dl>
+              </li>
+              <li><a href="/view/category/all_items">商品一覧</a></li>
+              <li><a href="/view/guide">ご利用ガイド</a></li>
+              <li><a href="/view/page/about">とは？</a></li>
+              <li><a href="#">店舗紹介</a></li>
+              <li><a href="#makeshop-common-contact-url">お問い合わせ</a></li>
+              <li><a href="/view/member/login">ログイン</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="sp-second-nav-wrap">
+          <div class="cart-link">
+            <a href="/view/cart" class="nav-cart"
+              ><img src="/view/images/template/11/svg-shopping-cart.svg" />
+              <span class="cart-badge">7</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!--- スマホここまで ---->
+      <div id="main-visual">
+        <div id="main-message"> <h2>獲れたそのままを</h2> <h2>今日の食卓に</h2> </div>
+        <div id="main-image">
+          <img id="maguro" src="images/main-maguro.png" alt="新鮮なまぐろ" />
+          <!-- <img id="wagara" src="images/wagara_wave.png" alt="背景イメージ" /> -->
+        </div>
+      </div>
+    </header>
+    <main>
+      <section id="pickup" class="pickup">
+        <div class="section-title">
+          <h2 class="section-title-text">おすすめ商品</h2>
+          <img class="section-title-img" src="images/fish_pink.svg" alt="" />
+        </div>
+        <div class="pickup-products-wrap flex3">
+          <div class="pickup-product flex3-ch fadeInAnimation fadeIn">
+            <a href="/view/item/000000000003"
+              ><img class="pickup-product-img" src="images/maguro.png" alt="Sample Product3 サンプルプロダクト３"
+            /></a>
+            <a href="/view/item/000000000003"
+              ><h3 class="pickup-product-name">Sample Product3 サンプルプロダクト３</h3></a
+            >
+            <p class="pickup-product-price">1,000円(税込)</p>
+            <div class="pickup-product-addToCart">
+              <a class="btn-primary" href="#">カートに入れる</a>
+            </div>
+          </div>
+          <div class="pickup-product flex3-ch fadeInAnimation fadeIn">
+            <a href="/view/item/000000000002"
+              ><img class="pickup-product-img" src="images/maguro.png" alt="Sample Product2 サンプルプロダクト２"
+            /></a>
+            <a href="/view/item/000000000002"
+              ><h3 class="pickup-product-name">Sample Product2 サンプルプロダクト２</h3></a
+            >
+            <p class="pickup-product-price">5,000円(税込)</p>
+            <div class="pickup-product-addToCart">
+              <a class="btn-primary" href="#">カートに入れる</a>
+            </div>
+          </div>
+          <div class="pickup-product flex3-ch fadeInAnimation fadeIn">
+            <a href="/view/item/000000000001"
+              ><img class="pickup-product-img" src="images/maguro.png" alt="Sample Product サンプルプロダクト"
+            /></a>
+            <a href="/view/item/000000000001"><h3 class="pickup-product-name">Sample Product サンプルプロダクト</h3></a>
+            <p class="pickup-product-price">2,000円(税込)</p>
+            <div class="pickup-product-addToCart">
+              <a class="btn-primary" href="#">カートに入れる</a>
+            </div>
+          </div>
+        </div>
+        <div class="pickup-all-products btn-link-wrap">
+          <a href="#" class="btn-link">全商品を見る</a>
+        </div>
+      </section>
+      <section id="information" class="information">
+        <div class="section-title fadeInAnimation fadeIn">
+          <h2 class="section-title-text">お知らせ一覧</h2>
+          <img class="section-title-img" src="images/fish_pink.svg" alt="" />
+        </div>
+        <div class="information-wrap">
+          <ul>
+            <li class="fadeInAnimation fadeIn"
+              ><span class="information-date">2023/10/01</span
+              ><a href="/view/news/20231001060724"
+                ><span class="information-title"
+                  >まぐろ屋けんちゃんオンラインショップ準備中！まぐろ屋けんちゃんオンラインショップ準備中！</span
+                ></a
+              ></li
+            >
+            <li class="fadeInAnimation fadeIn"
+              ><span class="information-date">2023/10/09</span
+              ><a href="/view/news/20231009093539"><span class="information-title">お知らせ三つ目！！</span></a></li
+            >
+            <li class="fadeInAnimation fadeIn"
+              ><span class="information-date">2023/10/09</span
+              ><a href="/view/news/20231009093352"><span class="information-title">お知らせ二つ目！</span></a></li
+            >
+          </ul>
+          <div class="information-all btn-link-wrap">
+            <a class="btn-link" href="/view/news/list">お知らせ一覧</a>
+          </div>
+        </div>
+      </section>
+      <section id="categories" class="categories">
+        <div class="section-title">
+          <h2 class="section-title-text">商品カテゴリ</h2>
+          <img class="section-title-img" src="images/fish_pink.svg" alt="" />
+        </div>
+        <div class="categories-wrap flex3">
+          <div class="category flex3-ch">
+            <a href="#">
+              <img src="images/category_fish.png" alt="生魚カテゴリ" />
+              <p class="category-name">生魚</p>
+            </a>
+          </div>
+          <div class="category flex3-ch">
+            <a href="#">
+              <img src="images/category_meat.png" alt="生肉カテゴリ" />
+              <p class="category-name">生肉</p>
+            </a>
+          </div>
+          <div class="category flex3-ch">
+            <a href="#">
+              <img src="images/category_dish.png" alt="調理済カテゴリ" />
+              <p class="category-name">調理済</p>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section id="concept" class="concept">
+        <div class="concept-wrap">
+          <div class="concept-wrap-content flexcenter">
+            <p
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita temporibus distinctio, dolor ipsam
+              aliquid asperiores quos architecto inventore iure fugiat.</p
+            >
+          </div>
+          <div class="concept-wrap-content flexcenter">
+            <h3>なにかの文字</h3>
+          </div>
+          <div class="concept-wrap-content flexcenter">
+            <img class="boxshadow" src="images/concept1.jpg" alt="" />
+          </div>
+        </div>
+        <div class="concept-wrap concept-wrap2">
+          <div class="concept-wrap-content flexcenter">
+            <img class="boxshadow" src="images/concept2.png" alt="" />
+          </div>
+          <div class="concept-wrap-content flexcenter">
+            <h3>なにかの文字</h3>
+          </div>
+          <div class="concept-wrap-content flexcenter">
+            <p
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita temporibus distinctio, dolor ipsam
+              aliquid asperiores quos architecto inventore iure fugiat.</p
+            >
+          </div>
+        </div>
+        <div class="btn-link-wrap">
+          <a class="btn-link" href="/view/news/list">まぐろ屋けんちゃんとは？</a>
+        </div>
+      </section>
+      <section id="frozencas" class="frozencas">
+        <div class="frozencas-wrap flexcenter">
+          <p
+            >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus delectus omnis distinctio nulla
+            excepturi numquam tempora aliquam odio eos repellat, quisquam libero!</p
+          >
+          <div class="btn-link-wrap">
+            <a class="btn-link" href="/view/news/list">詳しく読む</a>
+          </div>
+        </div>
+      </section>
+      <section id="ethical" class="ethical">
+        <div class="section-title">
+          <h2 class="section-title-text">冷凍食品で始める<br />エシカル消費</h2>
+          <img class="section-title-img" src="images/fish_pink.svg" alt="" />
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, laborum!</p>
+        <div class="ethical-wrap flex3">
+          <div class="flex3-ch ethical-content">
+            <img src="images/ethical1.png" alt="" />
+            <div class="ethical-desc">
+              <h3>地産地消</h3>
+              <p
+                >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus molestiae praesentium dolore.
+                Repellendus, minima. Aliquam hic adipisci veritatis quo temporibus?</p
+              >
+            </div>
+          </div>
+          <div class="flex3-ch ethical-content">
+            <img src="images/ethical2.png" alt="" />
+            <div class="ethical-desc">
+              <h3>安全で高品質</h3>
+              <p
+                >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus molestiae praesentium dolore.
+                Repellendus, minima. Aliquam hic adipisci veritatis quo temporibus?</p
+              >
+            </div>
+          </div>
+          <div class="flex3-ch ethical-content">
+            <img src="images/ethical3.png" alt="" />
+            <div class="ethical-desc">
+              <h3>必要な量<span class="smaller-text">を</span>必要なとき<span class="smaller-text">に</span></h3>
+              <p
+                >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus molestiae praesentium dolore.
+                Repellendus, minima. Aliquam hic adipisci veritatis quo temporibus?</p
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="divisions" class="divisions">
+        <div class="section-title">
+          <h2 class="section-title-text">関連施設紹介</h2>
+          <img class="section-title-img" src="images/fish_pink.svg" alt="" />
+        </div>
+        <div class="concept-wrap concept-wrap2 bouken">
+          <div class="concept-wrap-content flexcenter">
+            <img class="boxshadow" src="images/boukennokuni.jpg" alt="" />
+          </div>
+          <div class="concept-wrap-content flexcenter">
+            <h3 class="division-catch">触れる・遊ぶ・知る</h3>
+          </div>
+          <div class="concept-wrap-content flexcenter">
+            <div>
+              <h3>釣って見つけるぼうけんの国</h3>
+              <p
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita temporibus distinctio, dolor ipsam
+                aliquid.</p
+              >
+              <div class="btn-link-wrap">
+                <a class="btn-link" href="/view/news/list">公式サイトへ</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="concept-wrap concept-wrap2 hatta">
+          <div class="concept-wrap-content flexcenter">
+            <img class="boxshadow" src="images/hatta.jpg" alt="" />
+          </div>
+          <div class="concept-wrap-content flexcenter">
+            <h3 class="division-catch">食べる・飲む・笑う</h3>
+          </div>
+          <div class="concept-wrap-content flexcenter">
+            <div>
+              <h3>和食処八田 湘南台西口<br />和風ダイニング八田</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. dolor ipsam aliquid.</p>
+              <div class="btn-link-wrap">
+                <a class="btn-link" href="/view/news/list">詳細ページへ</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!---
+      <section id="instagram">
+        <div class="instagram-wrap slick-initialized slick-slider slick-dotted"
+          ><button class="slick-prev slick-arrow" aria-label="Previous" type="button">Previous</button>
+
+          <div class="slick-list draggable"
+            ><div class="slick-track" style="opacity: 1; width: 2625px; transform: translate3d(-375px, 0px, 0px)"
+              ><div
+                class="instagram-post slick-slide slick-cloned"
+                tabindex="-1"
+                role="tabpanel"
+                style="width: 375px"
+                aria-describedby="slick-slide-control01"
+                data-slick-index="-1"
+                aria-hidden="true"
+              >
+                <iframe
+                  class="instagram-media instagram-media-rendered"
+                  id=""
+                  src="https://www.instagram.com/p/Cx7LIxfSXt4/embed/?cr=1&amp;v=5&amp;wp=400&amp;rd=http%3A%2F%2Fwww.maguroichiba.com&amp;rp=%2F%3Fptk%3D9e5c1d95fcba716c00436bcf3d612b53ff11cab1#%7B%22ci%22%3A2%2C%22os%22%3A3902.100000023842%7D"
+                  allowtransparency="true"
+                  allowfullscreen="true"
+                  frameborder="0"
+                  height="532"
+                  data-instgrm-payload-id="instagram-media-payload-2"
+                  scrolling="no"
+                  style="
+                    background-color: white;
+                    border-radius: 3px;
+                    border: 1px solid rgb(219, 219, 219);
+                    box-shadow: none;
+                    display: block;
+                    margin: 0px 0px 12px;
+                    min-width: 326px;
+                    padding: 0px;
+                  "
+                ></iframe>
+                <script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script> </div
+              ><div
+                class="instagram-post slick-slide slick-current slick-active"
+                tabindex="0"
+                role="tabpanel"
+                id="slick-slide00"
+                aria-describedby="slick-slide-control00"
+                style="width: 375px"
+                data-slick-index="0"
+                aria-hidden="false"
+              >
+                <iframe
+                  class="instagram-media instagram-media-rendered"
+                  id="instagram-embed-0"
+                  src="https://www.instagram.com/p/CxCzb5eyupQ/embed/?cr=1&amp;v=5&amp;rd=http%3A%2F%2Fwww.maguroichiba.com&amp;rp=%2F%3Fptk%3D9e5c1d95fcba716c00436bcf3d612b53ff11cab1#%7B%22ci%22%3A0%2C%22os%22%3A3889.600000023842%7D"
+                  allowtransparency="true"
+                  allowfullscreen="true"
+                  frameborder="0"
+                  height="532"
+                  data-instgrm-payload-id="instagram-media-payload-0"
+                  scrolling="no"
+                  style="
+                    background-color: white;
+                    border-radius: 3px;
+                    border: 1px solid rgb(219, 219, 219);
+                    box-shadow: none;
+                    display: block;
+                    margin: 0px 0px 12px;
+                    min-width: 326px;
+                    padding: 0px;
+                  "
+                ></iframe>
+                <script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script> </div
+              ><div
+                class="instagram-post slick-slide"
+                tabindex="-1"
+                role="tabpanel"
+                id="slick-slide01"
+                style="width: 375px"
+                aria-describedby="slick-slide-control01"
+                data-slick-index="1"
+                aria-hidden="true"
+              >
+                <iframe
+                  class="instagram-media instagram-media-rendered"
+                  id="instagram-embed-1"
+                  src="https://www.instagram.com/p/CxcIfsISkQZ/embed/?cr=1&amp;v=5&amp;rd=http%3A%2F%2Fwww.maguroichiba.com&amp;rp=%2F%3Fptk%3D9e5c1d95fcba716c00436bcf3d612b53ff11cab1#%7B%22ci%22%3A1%2C%22os%22%3A3898%7D"
+                  allowtransparency="true"
+                  allowfullscreen="true"
+                  frameborder="0"
+                  height="532"
+                  data-instgrm-payload-id="instagram-media-payload-1"
+                  scrolling="no"
+                  style="
+                    background-color: white;
+                    border-radius: 3px;
+                    border: 1px solid rgb(219, 219, 219);
+                    box-shadow: none;
+                    display: block;
+                    margin: 0px 0px 12px;
+                    min-width: 326px;
+                    padding: 0px;
+                  "
+                ></iframe>
+                <script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script> </div
+              ><div
+                class="instagram-post slick-slide"
+                tabindex="-1"
+                role="tabpanel"
+                id="slick-slide02"
+                style="width: 375px"
+                aria-describedby="slick-slide-control02"
+                data-slick-index="2"
+                aria-hidden="true"
+              >
+                <iframe
+                  class="instagram-media instagram-media-rendered"
+                  id="instagram-embed-2"
+                  src="https://www.instagram.com/p/Cx7LIxfSXt4/embed/?cr=1&amp;v=5&amp;wp=400&amp;rd=http%3A%2F%2Fwww.maguroichiba.com&amp;rp=%2F%3Fptk%3D9e5c1d95fcba716c00436bcf3d612b53ff11cab1#%7B%22ci%22%3A2%2C%22os%22%3A3902.100000023842%7D"
+                  allowtransparency="true"
+                  allowfullscreen="true"
+                  frameborder="0"
+                  height="532"
+                  data-instgrm-payload-id="instagram-media-payload-2"
+                  scrolling="no"
+                  style="
+                    background-color: white;
+                    border-radius: 3px;
+                    border: 1px solid rgb(219, 219, 219);
+                    box-shadow: none;
+                    display: block;
+                    margin: 0px 0px 12px;
+                    min-width: 326px;
+                    padding: 0px;
+                  "
+                ></iframe>
+                <script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script> </div
+              ><div
+                class="instagram-post slick-slide slick-cloned"
+                tabindex="-1"
+                role="tabpanel"
+                aria-describedby="slick-slide-control00"
+                style="width: 375px"
+                data-slick-index="3"
+                aria-hidden="true"
+              >
+                <iframe
+                  class="instagram-media instagram-media-rendered"
+                  id=""
+                  src="https://www.instagram.com/p/CxCzb5eyupQ/embed/?cr=1&amp;v=5&amp;rd=http%3A%2F%2Fwww.maguroichiba.com&amp;rp=%2F%3Fptk%3D9e5c1d95fcba716c00436bcf3d612b53ff11cab1#%7B%22ci%22%3A0%2C%22os%22%3A3889.600000023842%7D"
+                  allowtransparency="true"
+                  allowfullscreen="true"
+                  frameborder="0"
+                  height="532"
+                  data-instgrm-payload-id="instagram-media-payload-0"
+                  scrolling="no"
+                  style="
+                    background-color: white;
+                    border-radius: 3px;
+                    border: 1px solid rgb(219, 219, 219);
+                    box-shadow: none;
+                    display: block;
+                    margin: 0px 0px 12px;
+                    min-width: 326px;
+                    padding: 0px;
+                  "
+                ></iframe>
+                <script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script> </div
+              ><div
+                class="instagram-post slick-slide slick-cloned"
+                tabindex="-1"
+                role="tabpanel"
+                style="width: 375px"
+                aria-describedby="slick-slide-control01"
+                data-slick-index="4"
+                aria-hidden="true"
+              >
+                <iframe
+                  class="instagram-media instagram-media-rendered"
+                  id=""
+                  src="https://www.instagram.com/p/CxcIfsISkQZ/embed/?cr=1&amp;v=5&amp;rd=http%3A%2F%2Fwww.maguroichiba.com&amp;rp=%2F%3Fptk%3D9e5c1d95fcba716c00436bcf3d612b53ff11cab1#%7B%22ci%22%3A1%2C%22os%22%3A3898%7D"
+                  allowtransparency="true"
+                  allowfullscreen="true"
+                  frameborder="0"
+                  height="532"
+                  data-instgrm-payload-id="instagram-media-payload-1"
+                  scrolling="no"
+                  style="
+                    background-color: white;
+                    border-radius: 3px;
+                    border: 1px solid rgb(219, 219, 219);
+                    box-shadow: none;
+                    display: block;
+                    margin: 0px 0px 12px;
+                    min-width: 326px;
+                    padding: 0px;
+                  "
+                ></iframe>
+                <script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script> </div
+              ><div
+                class="instagram-post slick-slide slick-cloned"
+                tabindex="-1"
+                role="tabpanel"
+                style="width: 375px"
+                aria-describedby="slick-slide-control01"
+                data-slick-index="5"
+                aria-hidden="true"
+              >
+                <iframe
+                  class="instagram-media instagram-media-rendered"
+                  id=""
+                  src="https://www.instagram.com/p/Cx7LIxfSXt4/embed/?cr=1&amp;v=5&amp;wp=400&amp;rd=http%3A%2F%2Fwww.maguroichiba.com&amp;rp=%2F%3Fptk%3D9e5c1d95fcba716c00436bcf3d612b53ff11cab1#%7B%22ci%22%3A2%2C%22os%22%3A3902.100000023842%7D"
+                  allowtransparency="true"
+                  allowfullscreen="true"
+                  frameborder="0"
+                  height="532"
+                  data-instgrm-payload-id="instagram-media-payload-2"
+                  scrolling="no"
+                  style="
+                    background-color: white;
+                    border-radius: 3px;
+                    border: 1px solid rgb(219, 219, 219);
+                    box-shadow: none;
+                    display: block;
+                    margin: 0px 0px 12px;
+                    min-width: 326px;
+                    padding: 0px;
+                  "
+                ></iframe>
+                <script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"></script> </div></div></div
+          ><button class="slick-next slick-arrow" aria-label="Next" type="button">Next</button
+          ><ul class="slick-dots" role="tablist"
+            ><li class="slick-active" role="presentation"
+              ><button
+                type="button"
+                role="tab"
+                id="slick-slide-control00"
+                aria-controls="slick-slide00"
+                aria-label="1 of 3"
+                tabindex="0"
+                aria-selected="true"
+                >1</button
+              ></li
+            ><li role="presentation"
+              ><button
+                type="button"
+                role="tab"
+                id="slick-slide-control01"
+                aria-controls="slick-slide01"
+                aria-label="2 of 3"
+                tabindex="-1"
+                >2</button
+              ></li
+            ><li role="presentation"
+              ><button
+                type="button"
+                role="tab"
+                id="slick-slide-control02"
+                aria-controls="slick-slide02"
+                aria-label="3 of 3"
+                tabindex="-1"
+                >3</button
+              ></li
+            ></ul
+          ></div
+        >
+      </section>
+    -->
+    </main>
+
+    <footer class="footer">
+      <div class="footer-info">
+        <div class="footer-contents">
+          <div class="footer-menu-container">
+            <div class="footer-menu">
+              <p class="footer-menu-list-title">SHOP INFO</p>
+              <ul class="footer-menu-list footer-info">
+                <li class="footer-menu-list-item"><a href="/view/guide">ご利用ガイド</a></li>
+                <li class="footer-menu-list-item"><a href="/view/policy">プライバシーポリシー</a></li>
+                <li class="footer-menu-list-item"><a href="/view/contract">特定商取引法</a></li>
+                <li class="footer-menu-list-item"><a href="/view/company">会社概要</a></li>
+              </ul>
+            </div>
+            <div class="footer-menu">
+              <p class="footer-menu-list-title">CONTACT US</p>
+              <ul class="footer-menu-list footer-contact">
+                <li class="footer-menu-list-item"><a href="#makeshop-common-contact-url">お問い合わせフォーム</a></li>
+                <li class="footer-menu-list-item"><a href="tel:"></a></li>
+              </ul>
+            </div>
+            <div class="footer-menu">
+              <p class="footer-menu-list-title">営業日カレンダー</p>
+              <div class="calender-area">
+                <div>
+                  <p class="calender-month">2023年10月</p>
+                  <table class="makeshop-calendar1">
+                    <thead>
+                      <tr>
+                        <th class="sunday">日</th>
+                        <th class="monday">月</th>
+                        <th class="tuesday">火</th>
+                        <th class="wednesday">水</th>
+                        <th class="thursday">木</th>
+                        <th class="friday">金</th>
+                        <th class="saturday">土</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="sunday day1">1</td>
+                        <td class="monday day2">2</td>
+                        <td class="tuesday day3">3</td>
+                        <td class="wednesday day4">4</td>
+                        <td class="thursday day5">5</td>
+                        <td class="friday day6">6</td>
+                        <td class="saturday day7">7</td>
+                      </tr>
+                      <tr>
+                        <td class="sunday day8">8</td>
+                        <td class="monday day9 today">9</td>
+                        <td class="tuesday day10">10</td>
+                        <td class="wednesday day11">11</td>
+                        <td class="thursday day12">12</td>
+                        <td class="friday day13">13</td>
+                        <td class="saturday day14">14</td>
+                      </tr>
+                      <tr>
+                        <td class="sunday day15">15</td>
+                        <td class="monday day16">16</td>
+                        <td class="tuesday day17">17</td>
+                        <td class="wednesday day18">18</td>
+                        <td class="thursday day19">19</td>
+                        <td class="friday day20">20</td>
+                        <td class="saturday day21">21</td>
+                      </tr>
+                      <tr>
+                        <td class="sunday day22">22</td>
+                        <td class="monday day23">23</td>
+                        <td class="tuesday day24">24</td>
+                        <td class="wednesday day25">25</td>
+                        <td class="thursday day26">26</td>
+                        <td class="friday day27">27</td>
+                        <td class="saturday day28">28</td>
+                      </tr>
+                      <tr>
+                        <td class="sunday day29">29</td>
+                        <td class="monday day30">30</td>
+                        <td class="tuesday day31">31</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="calender-note">
+                    <div><span style="color: #ef9d0f">■</span>今日</div>
+
+                    <!--今月の特定日の設定-->
+                  </div>
+                </div>
+                <div>
+                  <p class="calender-month">2023年11月</p>
+                  <table class="makeshop-calendar2">
+                    <thead>
+                      <tr>
+                        <th class="sunday">日</th>
+                        <th class="monday">月</th>
+                        <th class="tuesday">火</th>
+                        <th class="wednesday">水</th>
+                        <th class="thursday">木</th>
+                        <th class="friday">金</th>
+                        <th class="saturday">土</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="wednesday day1">1</td>
+                        <td class="thursday day2">2</td>
+                        <td class="friday day3">3</td>
+                        <td class="saturday day4">4</td>
+                      </tr>
+                      <tr>
+                        <td class="sunday day5">5</td>
+                        <td class="monday day6">6</td>
+                        <td class="tuesday day7">7</td>
+                        <td class="wednesday day8">8</td>
+                        <td class="thursday day9">9</td>
+                        <td class="friday day10">10</td>
+                        <td class="saturday day11">11</td>
+                      </tr>
+                      <tr>
+                        <td class="sunday day12">12</td>
+                        <td class="monday day13">13</td>
+                        <td class="tuesday day14">14</td>
+                        <td class="wednesday day15">15</td>
+                        <td class="thursday day16">16</td>
+                        <td class="friday day17">17</td>
+                        <td class="saturday day18">18</td>
+                      </tr>
+                      <tr>
+                        <td class="sunday day19">19</td>
+                        <td class="monday day20">20</td>
+                        <td class="tuesday day21">21</td>
+                        <td class="wednesday day22">22</td>
+                        <td class="thursday day23">23</td>
+                        <td class="friday day24">24</td>
+                        <td class="saturday day25">25</td>
+                      </tr>
+                      <tr>
+                        <td class="sunday day26">26</td>
+                        <td class="monday day27">27</td>
+                        <td class="tuesday day28">28</td>
+                        <td class="wednesday day29">29</td>
+                        <td class="thursday day30">30</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="calender-note">
+                    <!--翌月の特定日の設定-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <!-- slickのJavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
