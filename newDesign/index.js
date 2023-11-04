@@ -72,7 +72,7 @@ $(function () {
 $("#main-slideshow").slick({
   arrows: false,
   dots: true,
-  autoplay: true,
+  // autoplay: true,
   autoplaySpeed: 8000,
   speed: 1500,
   // fade: true,
