@@ -2881,6 +2881,8 @@ responsive
 }
 
 .btn-link {
+  display: block;
+  width: fit-content;
   font-weight: 700;
   transition: all 0.25s;
   padding: 0.5em 2em;
