@@ -3574,6 +3574,7 @@ header .header-inner-wrap,
   width: 100px;
   position: fixed;
   inset: auto 0 150px auto;
+  z-index: 9999;
 }
 #coupon-close {
   padding: 3px;
@@ -3587,7 +3588,6 @@ header .header-inner-wrap,
   background: #000;
   border-radius: 50%;
   cursor: pointer;
-  z-index: 9999;
 }
 
 #footer-nav {

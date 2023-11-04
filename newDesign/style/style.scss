@@ -956,6 +956,7 @@ header .header-inner-wrap,
   width: 100px;
   position: fixed;
   inset: auto 0 150px auto;
+  z-index: 9999;
 
   &-close {
     padding: 3px;
