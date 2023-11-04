@@ -265,6 +265,7 @@ header .header-inner-wrap,
 .sp-nav-logo img {
   height: 60px;
   padding: 5px 0;
+  object-fit: contain;
 }
 .menu-trigger {
   display: inline-block;
@@ -388,6 +389,19 @@ header .header-inner-wrap,
       &:last-child {
         margin-bottom: -3rem;
         align-self: flex-end;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .main-visual {
+    .main-message {
+      h2 {
+        font-size: 1.5rem;
+        &:first-child {
+          margin-top: 1.5rem;
+        }
       }
     }
   }

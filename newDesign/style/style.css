@@ -3040,6 +3040,7 @@ header .header-inner-wrap,
 .sp-nav-logo img {
   height: 60px;
   padding: 5px 0;
+  object-fit: contain;
 }
 
 .menu-trigger {
@@ -3166,6 +3167,14 @@ header .header-inner-wrap,
   align-self: flex-end;
 }
 
+@media (max-width: 400px) {
+  .main-visual .main-message h2 {
+    font-size: 1.5rem;
+  }
+  .main-visual .main-message h2:first-child {
+    margin-top: 1.5rem;
+  }
+}
 .main-image img {
   width: 100%;
   opacity: 0;
