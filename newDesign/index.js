@@ -159,3 +159,7 @@ $(window).on("load", function () {
   scrollSlideRLInAnime();
   scrollSlideLRInAnime();
 });
+
+$("#coupon-close").on("click", function () {
+  $("#coupon").fadeOut();
+});
