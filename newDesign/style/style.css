@@ -3587,6 +3587,7 @@ header .header-inner-wrap,
   background: #000;
   border-radius: 50%;
   cursor: pointer;
+  z-index: 9999;
 }
 
 #footer-nav {
