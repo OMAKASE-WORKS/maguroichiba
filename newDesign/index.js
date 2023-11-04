@@ -69,8 +69,20 @@ $(function () {
 
 /* Add */
 
-let heading = document.querySelectorAll("#main-message h2");
-console.log(heading[0]);
+$("#main-slideshow").slick({
+  arrows: false,
+  dots: true,
+  // autoplay: true,
+  autoplaySpeed: 8000,
+  speed: 1500,
+  // fade: true,
+  pauseOnFocus: false,
+  pauseOnHover: false,
+  pauseOnDotsHover: false,
+});
+
+// main message animation
+let heading = document.querySelectorAll(".main-message.slide-1 h2");
 let count = 0;
 for (let i = 0; i < heading.length; i++) {
   let headingArray = heading[i].innerHTML.split("");
@@ -147,48 +159,3 @@ $(window).on("load", function () {
   scrollSlideRLInAnime();
   scrollSlideLRInAnime();
 });
-
-// function scrollFadeInAnime(element) {
-//   let elemPos = element.getBoundingClientRect().top;
-//   let windowHeight = window.innerHeight;
-
-//   if (elemPos - windowHeight <= 0) {
-//     element.classList.add("fadeIn");
-//   } else {
-//     element.classList.remove("fadeIn");
-//   }
-// }
-
-// function scrollSlideInAnime(element) {
-//   let elemPos = element.getBoundingClientRect().top;
-//   let windowHeight = window.innerHeight;
-
-//   if (elemPos - windowHeight <= 0) {
-//     element.classList.add("slideIn");
-//   } else {
-//     element.classList.remove("slideIn");
-//   }
-// }
-
-// // Helper function to iterate over elements and apply animations
-// function handleScrollAnimations() {
-//   let fadeInElements = document.querySelectorAll(".fadeInAnimation");
-//   let slideInElements = document.querySelectorAll(".slideInAnimation");
-
-//   fadeInElements.forEach(function (element) {
-//     scrollFadeInAnime(element);
-//   });
-
-//   slideInElements.forEach(function (element) {
-//     scrollSlideInAnime(element);
-//   });
-// }
-
-// // Scroll event listener
-// window.addEventListener("scroll", handleScrollAnimations);
-
-// // Load event listener
-// window.addEventListener("load", handleScrollAnimations);
-
-// // Initial execution on load
-// handleScrollAnimations();

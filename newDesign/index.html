@@ -11,14 +11,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="slick.css" />
     <link rel="stylesheet" href="style/style.css" />
   </head>
   <body>
     <header>
       <div class="top-bar clearfix">
         <h1
-          >高度なCAS冷凍技術を使用した魚介類
-          を中心にした本格的な食体験を提供する冷凍食品ショップ「まぐろ屋けんちゃん」</h1
+          >高度なCAS冷凍技術を使用した魚介類を中心にした本格的な食体験を提供する冷凍食品ショップ「まぐろ屋けんちゃん」</h1
         >
         <div class="header-inner-wrap">
           <div class="header-inner header-logo">
@@ -131,11 +131,24 @@
         </div>
       </div>
       <!--- スマホここまで ---->
-      <div id="main-visual">
-        <div id="main-message"> <h2>獲れたそのままを</h2> <h2>今日の食卓に</h2> </div>
-        <div id="main-image">
-          <img id="maguro" src="images/main-maguro.png" alt="新鮮なまぐろ" />
-          <!-- <img id="wagara" src="images/wagara_wave.png" alt="背景イメージ" /> -->
+      <div id="main-slideshow">
+        <div>
+          <div class="main-visual slide-1">
+            <div class="main-message slide-1"> <h2>獲れたそのままを</h2> <h2>今日の食卓に</h2> </div>
+            <div class="main-image">
+              <img class="" src="images/main-maguro.png" alt="新鮮なまぐろ" />
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="main-visual slide-3">
+            <div class="sub-main-image"><img src="images/karei.png" alt="" /></div>
+          </div>
+        </div>
+        <div>
+          <div class="main-visual slide-3">
+            <div class="sub-main-image"><img src="images/maguro.png" alt="" /></div>
+          </div>
         </div>
       </div>
     </header>
@@ -222,20 +235,26 @@
         <div class="categories-wrap flex3">
           <div class="category flex3-ch">
             <a href="#">
-              <img src="images/category_fish.png" alt="魚介類カテゴリ" />
-              <p class="category-name">魚介類</p>
+              <img src="images/category_fish.png" alt="特価カテゴリ" />
+              <p class="category-name">お買い得</p>
             </a>
           </div>
           <div class="category flex3-ch">
             <a href="#">
-              <img src="images/category_meat.png" alt="肉類カテゴリ" />
-              <p class="category-name">肉類</p>
+              <img src="images/category_fish.png" alt="まぐろカテゴリ" />
+              <p class="category-name">まぐろ</p>
             </a>
           </div>
           <div class="category flex3-ch">
             <a href="#">
-              <img src="images/category_dish.png" alt="調理済カテゴリ" />
-              <p class="category-name">調理済</p>
+              <img src="images/category_meat.png" alt="冷凍惣菜カテゴリ" />
+              <p class="category-name">冷凍総菜</p>
+            </a>
+          </div>
+          <div class="category flex3-ch">
+            <a href="#">
+              <img src="images/category_dish.png" alt="イカ・エビ・サーモン他カテゴリ" />
+              <p class="category-name">イカ・エビ・サーモン他</p>
             </a>
           </div>
         </div>
@@ -244,8 +263,7 @@
         <div class="concept-wrap">
           <div class="concept-wrap-content flexcenter">
             <p
-              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita temporibus distinctio, dolor ipsam
-              aliquid asperiores quos architecto inventore iure fugiat.</p
+              >しかし先生が奥さんに向かって、研究的に働き掛けたなら、二人の間にある生命の断片として不得要領に終った。私は最初何もかも隠さず打ち明けて、奥さんに限らず、奥さんにも能く通じないらしかった。</p
             >
           </div>
           <div class="concept-wrap-content flexcenter">
@@ -264,8 +282,7 @@
           </div>
           <div class="concept-wrap-content flexcenter">
             <p
-              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita temporibus distinctio, dolor ipsam
-              aliquid asperiores quos architecto inventore iure fugiat.</p
+              >しかし先生が奥さんに向かって、研究的に働き掛けたなら、二人の間にある生命の断片として不得要領に終った。私は最初何もかも隠さず打ち明けて、奥さんに限らず、奥さんにも能く通じないらしかった。</p
             >
           </div>
         </div>
@@ -276,8 +293,7 @@
       <section id="frozencas" class="frozencas">
         <div class="frozencas-wrap flexcenter">
           <p
-            >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus delectus omnis distinctio nulla
-            excepturi numquam tempora aliquam odio eos repellat, quisquam libero!</p
+            >するといきなりジョバンニは自分というものは、みんな天の川の砂の上にかかえていました。ジョバンニはいっさんに丘を走っていました。いまぼくたちのいるとこ、ここだろうジョバンニは首をたれて。</p
           >
           <div class="btn-link-wrap">
             <a class="btn-link" href="/view/news/list">詳しく読む</a>
@@ -289,15 +305,14 @@
           <h2 class="section-title-text">冷凍食品で始める<br />エシカル消費</h2>
           <img class="section-title-img" src="images/fish_pink.svg" alt="" />
         </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, laborum!</p>
+        <p>しかし先生が奥さんに向かって、研究的に働き掛けたなら、二人の間にある生命の断片として不得要領に終った。</p>
         <div class="ethical-wrap flex3">
           <div class="flex3-ch ethical-content">
             <img src="images/ethical1.png" alt="" />
             <div class="ethical-desc">
               <h3>地産地消</h3>
               <p
-                >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus molestiae praesentium dolore.
-                Repellendus, minima. Aliquam hic adipisci veritatis quo temporibus?</p
+                >するといきなりジョバンニは自分というものは、みんな天の川の砂の上にかかえていました。ジョバンニはいっさんに丘を走っていました。いまぼくたちのいるとこ、ここだろうジョバンニは首をたれて。</p
               >
             </div>
           </div>
@@ -306,8 +321,7 @@
             <div class="ethical-desc">
               <h3>安全で高品質</h3>
               <p
-                >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus molestiae praesentium dolore.
-                Repellendus, minima. Aliquam hic adipisci veritatis quo temporibus?</p
+                >するといきなりジョバンニは自分というものは、みんな天の川の砂の上にかかえていました。ジョバンニはいっさんに丘を走っていました。いまぼくたちのいるとこ、ここだろうジョバンニは首をたれて。</p
               >
             </div>
           </div>
@@ -316,8 +330,7 @@
             <div class="ethical-desc">
               <h3>必要な量<span class="smaller-text">を</span>必要なとき<span class="smaller-text">に</span></h3>
               <p
-                >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus molestiae praesentium dolore.
-                Repellendus, minima. Aliquam hic adipisci veritatis quo temporibus?</p
+                >するといきなりジョバンニは自分というものは、みんな天の川の砂の上にかかえていました。ジョバンニはいっさんに丘を走っていました。いまぼくたちのいるとこ、ここだろうジョバンニは首をたれて。</p
               >
             </div>
           </div>
@@ -339,8 +352,7 @@
             <div>
               <h3>釣って見つけるぼうけんの国</h3>
               <p
-                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita temporibus distinctio, dolor ipsam
-                aliquid.</p
+                >そしてジョバンニはすぐうしろの天気輪の柱も見わけられたのでした。おねえさまごらんなさい黒服の青年も眼をこすっていた席に黒い大きな帽子をかぶったせいの高い車掌が</p
               >
               <div class="btn-link-wrap">
                 <a class="btn-link" href="/view/news/list">公式サイトへ</a>
@@ -358,7 +370,9 @@
           <div class="concept-wrap-content flexcenter">
             <div>
               <h3>和食処八田 湘南台西口<br />和風ダイニング八田</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. dolor ipsam aliquid.</p>
+              <p
+                >そしてジョバンニはすぐうしろの天気輪の柱も見わけられたのでした。おねえさまごらんなさい黒服の青年も眼をこすっていた席に黒い大きな帽子をかぶったせいの高い車掌が</p
+              >
               <div class="btn-link-wrap">
                 <a class="btn-link" href="/view/news/list">詳細ページへ</a>
               </div>
@@ -366,6 +380,7 @@
           </div>
         </div>
       </section>
+
       <!---
       <section id="instagram">
         <div class="instagram-wrap slick-initialized slick-slider slick-dotted"
@@ -634,7 +649,42 @@
     </main>
 
     <footer class="footer">
-      <div class="footer-info">
+      <div id="coupon"> </div>
+      <div id="footer-nav">
+        <div id="footer-nav-wrap">
+          <div class="icon"
+            ><a href="">
+              <img src="images/icon_sale.svg" alt="" />
+              <p>特価品</p>
+            </a>
+          </div>
+          <div class="icon"
+            ><a href="">
+              <img src="images/icon_maguro.svg" alt="" />
+              <p>まぐろ</p>
+            </a>
+          </div>
+          <div class="icon"
+            ><a href="">
+              <img src="images/icon_souzai.svg" alt="" />
+              <p>冷凍惣菜</p>
+            </a>
+          </div>
+          <div class="icon"
+            ><a href="">
+              <img src="images/icon_squid.svg" alt="" />
+              <p>その他魚介</p>
+            </a>
+          </div>
+          <div class="icon"
+            ><a href="">
+              <img src="images/icon_eat.svg" alt="" />
+              <p>食べ方</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div style="display: none" class="footer-info">
         <div class="footer-contents">
           <div class="footer-menu-container">
             <div class="footer-menu">
@@ -799,7 +849,7 @@
     <!-- jQuery -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
     <!-- slickのJavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="slick.min.js"></script>
     <script src="index.js"></script>
   </body>
 </html>
