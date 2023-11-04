@@ -72,7 +72,7 @@ $(function () {
 $("#main-slideshow").slick({
   arrows: false,
   dots: true,
-  // autoplay: true,
+  autoplay: true,
   autoplaySpeed: 8000,
   speed: 1500,
   // fade: true,
@@ -160,6 +160,33 @@ $(window).on("load", function () {
   scrollSlideLRInAnime();
 });
 
+// Coupon close button
 $("#coupon-close").on("click", function () {
   $("#coupon").fadeOut();
 });
+
+// footer line banner and scroll top
+// $(function () {
+//   let couponPopUp = $(".scroll-appear");
+
+//   couponPopUp.css("display", "none");
+//   couponPopUp.css("opacity", "1");
+
+//   $(window).on("load scroll", function () {
+//     if ($(this).scrollTop() <= 200) {
+//       couponPopUp.fadeOut();
+//     }
+//     if ($(this).scrollTop() > 200) {
+//       couponPopUp.fadeIn();
+//     }
+//   });
+// });
+
+let couponPopUp = $(".scroll-appear");
+
+couponPopUp.css("display", "none");
+couponPopUp.css("opacity", "1");
+
+setTimeout(() => {
+  couponPopUp.fadeIn("slow");
+}, 8000);
