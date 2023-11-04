@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@400;500;700&family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap");
 @import url(//use.fontawesome.com/releases/v5.0.11/css/all.css);
 /*---------------------------------
 reset
@@ -2821,16 +2821,6 @@ responsive
 }
 
 /* ここは後で消す */
-html {
-  background: #eee;
-}
-
-body {
-  width: 450px;
-  margin: auto !important;
-  background: #fff;
-}
-
 /* ここまでは後で消す */
 /* variables */
 .flexcenter {
@@ -2946,15 +2936,22 @@ body {
 body,
 html {
   overflow-x: hidden;
-  contain: paint;
 }
 
 body {
   margin: 0;
-  padding: 0 1em;
   font-family: "Zen Maru Gothic", sans-serif;
   color: #333;
   position: relative;
+}
+
+main {
+  padding: 0 10px;
+}
+
+a,
+p {
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 img {
@@ -3096,16 +3093,64 @@ header .header-inner-wrap,
   transform: translateY(-4px) rotate(45deg);
 }
 
-#main-visual {
-  padding-top: 3rem;
+#main-slideshow {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  text-decoration: none;
 }
-#main-visual #main-message {
+
+#main-slideshow .slick-dots {
+  z-index: 1;
+  position: absolute;
+  inset: auto auto 10px 50%;
+  transform: translateX(-50%);
+}
+
+.slick-dots {
+  text-align: center;
+  margin: 20px 0 0 0;
+  padding: 0;
+}
+
+.slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+  overflow: unset;
+}
+
+.slick-dots button {
+  color: transparent;
+  outline: none;
+  width: 8px; /*ドットボタンのサイズ*/
+  height: 8px; /*ドットボタンのサイズ*/
+  display: block;
+  border-radius: 50%;
+  background: #ccc; /*ドットボタンの色*/
+  border: none;
+  padding: 0;
+  overflow: unset;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.slick-dots .slick-active button {
+  background: #000; /*ドットボタンの現在地表示の色*/
+}
+
+.main-visual {
+  margin-top: 0;
+  height: 100vh;
+}
+.main-visual .main-message {
   display: flex;
   justify-content: center;
   flex-direction: row-reverse;
   margin-bottom: 3rem;
+  padding-top: 3rem;
 }
-#main-visual #main-message h2 {
+.main-visual .main-message h2 {
   writing-mode: vertical-rl;
   width: fit-content;
   height: fit-content;
@@ -3113,15 +3158,15 @@ header .header-inner-wrap,
   font-size: 2rem;
   font-weight: 900;
 }
-#main-visual #main-message h2:first-child {
+.main-visual .main-message h2:first-child {
   margin-top: 3rem;
 }
-#main-visual #main-message h2:last-child {
+.main-visual .main-message h2:last-child {
   margin-bottom: -3rem;
   align-self: flex-end;
 }
 
-#main-image #maguro {
+.main-image img {
   width: 100%;
   opacity: 0;
   animation-name: main-visual;
@@ -3130,12 +3175,13 @@ header .header-inner-wrap,
   animation-iteration-count: 1;
   animation-delay: 4s;
 }
-#main-image::before {
+.main-image::before {
   content: "";
   width: 100%;
   height: 100%;
   background-image: url(../images/wagara_wave.png);
   background-size: contain;
+  background-repeat: no-repeat;
   position: absolute;
   inset: 50% auto auto 50%;
   transform: translate(-50%, -50%);
@@ -3145,6 +3191,25 @@ header .header-inner-wrap,
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
   animation-delay: 5s;
+}
+
+.slide-2 .sub-main-image,
+.slide-3 .sub-main-image {
+  height: 100%;
+}
+.slide-2 .sub-main-image img,
+.slide-3 .sub-main-image img {
+  object-fit: cover;
+  z-index: -1;
+}
+.slide-2 .sub-main-image::before,
+.slide-3 .sub-main-image::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  position: absolute;
+  inset: 0 auto auto 0;
 }
 
 .heading-char {
@@ -3269,7 +3334,7 @@ header .header-inner-wrap,
   font-size: 1.8rem;
   font-weight: 700;
   color: #fff;
-  letter-spacing: 0.5em;
+  text-wrap: nowrap;
 }
 .categories .category:hover::after {
   background-color: rgba(0, 0, 0, 0);
@@ -3277,10 +3342,12 @@ header .header-inner-wrap,
 
 .concept-wrap {
   width: 100%;
-  aspect-ratio: 3/5;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
+}
+.concept-wrap-content {
+  padding: 2.5em 1.2em;
 }
 .concept-wrap-content:first-child {
   grid-column: 1/3;
@@ -3288,7 +3355,6 @@ header .header-inner-wrap,
   background: #fc9799;
 }
 .concept-wrap-content:first-child p {
-  width: 65%;
   color: #fff;
 }
 .concept-wrap-content:nth-child(2) {
@@ -3345,7 +3411,6 @@ header .header-inner-wrap,
   z-index: -1;
 }
 .concept-wrap2 .concept-wrap-content:last-child p {
-  width: 65%;
   color: #fff;
 }
 
@@ -3365,7 +3430,6 @@ header .header-inner-wrap,
   background-color: rgba(255, 255, 255, 0.6);
 }
 .frozencas-wrap p {
-  width: 80%;
   z-index: 1;
 }
 .frozencas-wrap .btn-link-wrap {
@@ -3407,8 +3471,8 @@ header .header-inner-wrap,
 .divisions .concept-wrap {
   grid-template-columns: 1fr 3fr 1fr;
 }
-.divisions .concept-wrap-content:nth-child(2) h3 {
-  transform: translateY(15px);
+.divisions .concept-wrap-content:nth-child(2) {
+  padding: 0;
 }
 .divisions .concept-wrap-content:last-child {
   flex-direction: column;
@@ -3505,4 +3569,41 @@ header .header-inner-wrap,
     opacity: 1;
     transform: translateX(0px);
   }
+}
+#footer-nav {
+  width: 100%;
+  max-width: 600px;
+  background: #fff;
+  position: fixed;
+  inset: auto auto 0 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+#footer-nav-wrap {
+  display: flex;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
+}
+#footer-nav-wrap .icon {
+  padding: 0.5em;
+  border-left: 1px solid #eee;
+}
+#footer-nav-wrap .icon img {
+  width: 65%;
+  margin: auto;
+  aspect-ratio: 1/1;
+}
+#footer-nav-wrap .icon p {
+  font-size: 0.9em;
+  font-weight: 700;
+  color: #fc9799;
+  text-align: center;
+}
+#footer-nav-wrap .icon:first-child {
+  border: unset;
+}
+#footer-nav-wrap .icon:last-child {
+  background: #fc9799;
+}
+#footer-nav-wrap .icon:last-child p {
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */

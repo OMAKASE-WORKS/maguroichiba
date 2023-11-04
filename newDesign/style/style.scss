@@ -1,18 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@400;500;700&family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap");
 // @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Yuji+Syuku&display=swap");
 @import "makeshop-commonstyle";
 @import "makeshop-top";
 
 /* ここは後で消す */
-html {
-  background: #eee;
-}
+// html {
+//   background: #eee;
+// }
 
-body {
-  width: 450px;
-  margin: auto !important;
-  background: #fff;
-}
+// body {
+//   width: 450px;
+//   margin: auto !important;
+//   background: #fff;
+// }
 /* ここまでは後で消す */
 
 /* variables */
@@ -158,15 +158,24 @@ body,
 html {
   overflow-x: hidden;
   // overflow-y: visible;
-  contain: paint;
+  // contain: paint;
 }
 
 body {
   margin: 0;
-  padding: 0 1em;
+  // padding: 0 1em;
   font-family: "Zen Maru Gothic", sans-serif;
   color: $color-grayblack;
   position: relative;
+}
+
+main {
+  padding: 0 10px;
+}
+
+a,
+p {
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 img {
@@ -301,14 +310,68 @@ header .header-inner-wrap,
   transform: translateY(-4px) rotate(45deg);
 }
 
-#main-visual {
-  padding-top: 3rem;
+#main-slideshow {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  // aspect-ratio: 2/1;
+  margin: 0;
+  text-decoration: none;
+  // max-height: calc(100vh - 80px);
+}
 
-  #main-message {
+#main-slideshow .slick-dots {
+  z-index: 1;
+  position: absolute;
+  inset: auto auto 10px 50%;
+  transform: translateX(-50%);
+}
+
+.slick-dots {
+  text-align: center;
+  margin: 20px 0 0 0;
+  padding: 0;
+}
+
+.slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+  overflow: unset;
+}
+
+.slick-dots button {
+  color: transparent;
+  outline: none;
+  width: 8px; /*ドットボタンのサイズ*/
+  height: 8px; /*ドットボタンのサイズ*/
+  display: block;
+  border-radius: 50%;
+  background: #ccc; /*ドットボタンの色*/
+  border: none;
+  padding: 0;
+  overflow: unset;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.slick-dots .slick-active button {
+  background: #000; /*ドットボタンの現在地表示の色*/
+}
+
+.main-visual {
+  // padding-top: 3rem;
+  margin-top: 0;
+  height: 100vh;
+  // display: grid;
+  // grid-template-columns: 1fr;
+  // grid-template-rows: 2fr 1fr;
+
+  .main-message {
     display: flex;
     justify-content: center;
     flex-direction: row-reverse;
     margin-bottom: 3rem;
+    padding-top: 3rem;
 
     h2 {
       writing-mode: vertical-rl;
@@ -330,8 +393,8 @@ header .header-inner-wrap,
   }
 }
 
-#main-image {
-  #maguro {
+.main-image {
+  img {
     width: 100%;
     opacity: 0;
     animation: {
@@ -349,6 +412,7 @@ header .header-inner-wrap,
     height: 100%;
     background-image: url(../images/wagara_wave.png);
     background-size: contain;
+    background-repeat: no-repeat;
     position: absolute;
     inset: 50% auto auto 50%;
     transform: translate(-50%, -50%);
@@ -375,6 +439,25 @@ header .header-inner-wrap,
   //     delay: 5s;
   //   }
   // }
+}
+.slide-2,
+.slide-3 {
+  .sub-main-image {
+    height: 100%;
+    img {
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: rgba($color: #fff, $alpha: 0.25);
+      position: absolute;
+      inset: 0 auto auto 0;
+    }
+  }
 }
 .heading-char {
   opacity: 0;
@@ -553,7 +636,7 @@ header .header-inner-wrap,
       font-size: 1.8rem;
       font-weight: 700;
       color: #fff;
-      letter-spacing: 0.5em;
+      text-wrap: nowrap;
     }
 
     &:hover {
@@ -567,12 +650,14 @@ header .header-inner-wrap,
 .concept {
   &-wrap {
     width: 100%;
-    aspect-ratio: 3/5;
+    // aspect-ratio: 3/5;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
 
     &-content {
+      padding: 2.5em 1.2em;
+
       &:first-child {
         grid-column: 1/3;
         grid-row: 1/2;
@@ -580,7 +665,7 @@ header .header-inner-wrap,
         background: $color-pink;
 
         p {
-          width: 65%;
+          // width: 65%;
           color: #fff;
         }
       }
@@ -636,6 +721,7 @@ header .header-inner-wrap,
       &:nth-child(2) {
         grid-column: 3/4;
         grid-row: 1/2;
+        // padding: 0;
 
         h3 {
           color: $color-blue;
@@ -654,7 +740,7 @@ header .header-inner-wrap,
         z-index: -1;
 
         p {
-          width: 65%;
+          // width: 65%;
           color: #fff;
         }
       }
@@ -680,7 +766,7 @@ header .header-inner-wrap,
     }
 
     p {
-      width: 80%;
+      // width: 80%;
       z-index: 1;
     }
 
@@ -740,9 +826,10 @@ header .header-inner-wrap,
 
     &-content {
       &:nth-child(2) {
-        h3 {
-          transform: translateY(15px);
-        }
+        padding: 0;
+        // h3 {
+        //   transform: translateY(15px);
+        // }
       }
 
       &:last-child {
@@ -864,3 +951,47 @@ header .header-inner-wrap,
 //     margin-left: auto;
 //   }
 // }
+
+#footer-nav {
+  width: 100%;
+  max-width: 600px;
+  background: #fff;
+  position: fixed;
+  inset: auto auto 0 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+
+  &-wrap {
+    display: flex;
+    box-shadow: 0 0 5px 0 rgba($color: #000000, $alpha: 0.25);
+
+    .icon {
+      padding: 0.5em;
+      border-left: 1px solid #eee;
+
+      img {
+        width: 65%;
+        margin: auto;
+        aspect-ratio: 1/1;
+      }
+
+      p {
+        font-size: 0.9em;
+        font-weight: 700;
+        color: $color-pink;
+        text-align: center;
+      }
+
+      &:first-child {
+        border: unset;
+      }
+
+      &:last-child {
+        background: $color-pink;
+        p {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
